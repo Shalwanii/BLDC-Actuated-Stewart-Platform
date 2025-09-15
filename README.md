@@ -55,22 +55,23 @@ The project investigates the use of **BLDC motors** in a 6-DOF Stewart platform,
    Final Platform Assembly.step
    Potentiometer.SLDPRT
    Repeat_Compact.STEP
-
-/Code  
-   /arduino  
+  
+/Arduino  
       Single_Motor_Test.ino
       Sequential_Motor_Test.ino
       Coordinated_Multi_Motor_Test.ino 
-   /matlab  
-      stewartIK.m
-      workspace.m  
-   /python  
-      stewartFK.py  
+
+/Matlab  
+    stewartIK.m
+    workspace.m  
+
+/Python  
+    stewartFK.py  
 
 /Docs  
    README.md   
 
-
+```
 ```
 ## 🛠️ CAD Models
 
@@ -88,7 +89,7 @@ The project investigates the use of **BLDC motors** in a 6-DOF Stewart platform,
   - Full Assembly  
 
 ```
-
+```
 ## 💻 Code
 
 - **Arduino**  
@@ -105,7 +106,7 @@ The project investigates the use of **BLDC motors** in a 6-DOF Stewart platform,
 
 ```
 
-
+```
 ## ⚡ System Overview
 
 - **Actuators:** Repeat Compact Brushless Planetary 22mm Gearmotor  
@@ -115,7 +116,7 @@ The project investigates the use of **BLDC motors** in a 6-DOF Stewart platform,
 - **Sensors:** 10kΩ potentiometers (prototype), AS5048A magnetic encoders (planned upgrade)  
 - **Fabrication:** FDM 3D printing (PLA)  
 
-
+```
 ```
 ## 📊 Key Features
 
