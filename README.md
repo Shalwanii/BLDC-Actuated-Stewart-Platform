@@ -5,7 +5,6 @@ This repository contains all **CAD models**, **control code**, and **analysis sc
 
 The project investigates the use of **BLDC motors** in a 6-DOF Stewart platform, aiming to achieve **high responsiveness, precision, and lightweight design** suitable for UAV integration.
 
-```
 
 ## 📂 Repository Structure
 
@@ -71,8 +70,8 @@ The project investigates the use of **BLDC motors** in a 6-DOF Stewart platform,
 /Docs  
    README.md   
 
-```
 
+```
 ## 🛠️ CAD Models
 
 - **Format Provided:** `.f3d` (Fusion 360 native), `.step` (universal exchange), `.stl` (3D-printable).  
@@ -106,6 +105,7 @@ The project investigates the use of **BLDC motors** in a 6-DOF Stewart platform,
 
 ```
 
+
 ## ⚡ System Overview
 
 - **Actuators:** Repeat Compact Brushless Planetary 22mm Gearmotor  
@@ -115,8 +115,8 @@ The project investigates the use of **BLDC motors** in a 6-DOF Stewart platform,
 - **Sensors:** 10kΩ potentiometers (prototype), AS5048A magnetic encoders (planned upgrade)  
 - **Fabrication:** FDM 3D printing (PLA)  
 
-```
 
+```
 ## 📊 Key Features
 
 - Feasibility study of BLDC actuation for Stewart platforms.  
