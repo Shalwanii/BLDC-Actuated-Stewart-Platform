@@ -1,6 +1,6 @@
 #include <Servo.h>
 
-/* ===== Pins (UNO, your mapping) ===== */
+/* ===== Pins ===== */
 const uint8_t ESC_PINS[6] = {3, 5, 6, 9, 10, 11};   // 1L,1R,2L,2R,3L,3R
 const uint8_t POT_PINS[6] = {A0, A1, A2, A3, A4, A5};
 const char*   NAMES[6]    = {"1L","1R","2L","2R","3L","3R"};
@@ -61,8 +61,8 @@ bool  moving = false;
 bool  holding = false;
 unsigned long poseStart = 0;
 unsigned long holdStart = 0;
-unsigned long snapshotMillis = 0;  // <-- new
-unsigned long reach_ms = 0;        // <-- new
+unsigned long snapshotMillis = 0; 
+unsigned long reach_ms = 0;       
 bool  finished = false;
 
 /* Snapshot captured exactly when we enter HOLD (arrival or timeout) */
@@ -129,7 +129,7 @@ void setup() {
   for (int i=0;i<6; ++i) calibrateDirection(esc[i], POT_PINS[i], plusEffect[i]);
   lastMicros = micros();
 
-  // CSV header (added reach_ms)
+  // CSV header 
   Serial.println(F("pose,active,target_deg,status,reach_ms,last_1L_deg,last_1R_deg,last_2L_deg,last_2R_deg,last_3L_deg,last_3R_deg"));
 
   beginNewPose();
@@ -154,7 +154,7 @@ void loop() {
   // Neutral non-active motors
   for (int k=0;k<6; ++k) if (k != activeMotor) esc[k].writeMicroseconds(ESC_MID);
 
-  // Control active motor (NO CREEP)
+  // Control active motor
   int i = activeMotor;
   if (!holding) {
     // derivative for D-term
@@ -190,7 +190,7 @@ void loop() {
       esc[i].writeMicroseconds(pwm);
     }
   } else {
-    // Holding: stay neutral (NO CREEP)
+    // Holding: stay neutral
     esc[i].writeMicroseconds(ESC_MID);
   }
 

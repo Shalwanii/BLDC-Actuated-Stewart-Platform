@@ -9,7 +9,7 @@ LB = 150.0
 RB, SB = 95.103, 15.5
 RP, SP = 49.235, 11.0
 
-# Sector angles (deg): your layout [0,0,120,120,240,240]
+# Sector angles (deg): [0,0,120,120,240,240]
 BETA_DEG = np.array([0, 0, 120, 120, 240, 240], dtype=float)
 
 # Motor naming: [1L,1R,2L,2R,3L,3R]
@@ -17,7 +17,7 @@ LEFT_IDX  = [0, 2, 4]   # start at 180°
 RIGHT_IDX = [1, 3, 5]   # start at 0°
 NAMES = ["1L","1R","2L","2R","3L","3R"]
 
-# # ===== Your 50 poses (deg) in order [1L,1R,2L,2R,3L,3R] =====
+# # ===== 50 poses (deg) in order [1L,1R,2L,2R,3L,3R] =====
 
 # Desired angles
 # POSES = [

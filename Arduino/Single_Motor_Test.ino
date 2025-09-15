@@ -1,6 +1,6 @@
 #include <Servo.h>
 
-/* ===== Pins (UNO, your mapping) ===== */
+/* ===== Pins ===== */
 const uint8_t ESC_PINS[6] = {6, 9, 11, 10, 3, 5};   // 1L,1R,2L,2R,3L,3R
 const uint8_t POT_PINS[6] = {A4, A5, A1, A0, A2, A3};
 const char*   NAMES[6]    = {"1L","1R","2L","2R","3L","3R"};

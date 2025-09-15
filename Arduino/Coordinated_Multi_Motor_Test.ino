@@ -1,6 +1,6 @@
 #include <Servo.h>
 
-/* ===== Pins (UNO, your mapping) ===== */
+/* ===== Pins  ===== */
 const uint8_t ESC_PINS[6] = {3, 5, 6, 9, 10, 11};   // 1L,1R,2L,2R,3L,3R
 const uint8_t POT_PINS[6] = {A0, A1, A2, A3, A4, A5};
 const char*   NAMES[6]    = {"1L","1R","2L","2R","3L","3R"};
@@ -23,12 +23,12 @@ const Side SIDE[6] = {LEFT_SIDE, RIGHT_SIDE, LEFT_SIDE, RIGHT_SIDE, LEFT_SIDE, R
 inline int   angleToCounts(Side s, float deg) { return (int)lroundf(ZERO_COUNT + deg * ((s==LEFT_SIDE)?CNT_PER_DEG_LEFT:CNT_PER_DEG_RIGHT)); }
 inline float countsToAngle(Side s, int counts){ return (counts - ZERO_COUNT) * ((s==LEFT_SIDE)?DEG_PER_COUNT_LEFT:DEG_PER_COUNT_RIGHT); }
 
-/* ===== PD control (counts domain; NO CREEP) ===== */
+/* ===== PD control  ===== */
 float Kp_us_per_count     = 0.0025f;
 float Kd_us_per_cnt_per_s = 0.50f;
 const float DERIV_LP_ALPHA = 0.12f;
 
-/* ===== Arrival / timing (NO CREEP) ===== */
+/* ===== Arrival / timing  ===== */
 const int   ARRIVE_TOL              = 20;        // ±counts to declare arrived
 const unsigned long HOLD_MS         = 1000;      // neutral hold (logging)
 const unsigned long MOVE_TIMEOUT_MS = 5000;     // full time allowed to reach a pose
@@ -283,6 +283,4 @@ void loop() {
       }
     }
   }
-
-  delay(2);
 }

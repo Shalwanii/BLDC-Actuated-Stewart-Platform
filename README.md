@@ -10,30 +10,63 @@ The project investigates the use of **BLDC motors** in a 6-DOF Stewart platform,
 ## 📂 Repository Structure
 
 /CAD  
-   /Base  
-      BasePlate.f3d  
-      BasePlate.step  
-      BasePlate.stl  
-   /Arms  
-      LeverArm.f3d  
-      LeverArm.step  
-      LeverArm.stl  
-   /Couplers  
-      Coupler.f3d  
-      Coupler.step  
-      Coupler.stl  
-   /Assembly  
-      StewartPlatform.f3d  
-      StewartPlatform.step  
-      StewartPlatform.stl  
+   /Ball Joint
+      Ball Joint's Baseless Ball.f3d
+      Ball Joint's Baseless Ball.step
+      Ball Joint's Baseless Ball.stl
+    
+    /Lever Arm
+      Lever Arm.f3d
+      Lever Arm.step
+      Lever Arm.stl
+
+    /Motor Facemount
+      Motor Facemount.f3d  
+      Motor Facemount.step 
+      Motor Facemount.stl
+
+   /Moving Base
+      Moving Base.f3d  
+      Moving Base.step  
+      Moving Base.stl  
+
+   /Potentiometer Coupler  
+      Potentiometer Coupler.f3d  
+      Potentiometer Coupler.step  
+      Potentiometer Coupler.stl  
+
+    /Potentiometer Mount
+      Potentiometer Case.f3d
+      Potentiometer Case.step
+      Potentiometer Case.stl
+      Potentiometer L-Bracket.f3d
+      Potentiometer L-Bracket.step
+      Potentiometer L-Bracket.stl
+
+    /Shaft
+      Shaft.f3d
+      Shaft.step
+      Shaft.stl
+
+    /Stationary Base
+      Stationary Base.f3d
+      Stationary Base.step
+      Stationary Base.stl
+
+   Final Platform Assembly.step
+   Potentiometer.SLDPRT
+   Repeat_Compact.STEP
 
 /Code  
    /arduino  
-      motor_control.ino  
+      Single_Motor_Test.ino
+      Sequential_Motor_Test.ino
+      Coordinated_Multi_Motor_Test.ino 
    /matlab  
-      workspace_analysis.m  
+      stewartIK.m
+      workspace.m  
    /python  
-      error_analysis.py  
+      stewartFK.py  
 
 /Docs  
    README.md   
@@ -44,9 +77,14 @@ The project investigates the use of **BLDC motors** in a 6-DOF Stewart platform,
 
 - **Format Provided:** `.f3d` (Fusion 360 native), `.step` (universal exchange), `.stl` (3D-printable).  
 - **Components:**
-  - Base Plate  
-  - Lever Arms  
-  - Couplers (motor–potentiometer integration)  
+  - Ball Joint  
+  - Lever Arm
+  - Motor Facemount
+  - Moving Base
+  - Potentiometer Coupler
+  - Potentiometer Mount
+  - Shaft  
+  - Stationary Base
   - Moving Platform  
   - Full Assembly  
 
@@ -55,16 +93,16 @@ The project investigates the use of **BLDC motors** in a 6-DOF Stewart platform,
 ## 💻 Code
 
 - **Arduino**  
-  - Motor control sketches for BLDC actuation via AM32 ESCs.  
-  - Implements PD control loop with logging functionality.  
+  -   Single-Motor Calibration: Each motor was driven individually under different tolerance thresholds to tune the PD controller and characterise convergence behaviour with potentiometer feedback.  
+  - Sequential Motor Testing: Motors were activated one at a time with random target angles while the others were held neutral, measuring settling time, steady-state error, and reachability within defined angle windows.
+  - Coordinated Multi-Motor Evaluation: All six motors were commanded simultaneously and achieved poses were compared against desired ones to assess system-level accuracy, convergence, and pose errors.
 
 - **MATLAB**  
-  - Scripts for workspace analysis (grid search + alpha-shape volume).  
+  - Scripts for workspace analysis.  
   - Inverse kinematics implementation for rotary Stewart platform.  
 
 - **Python**  
-  - Post-processing of experimental data.  
-  - Angle error vs. pose error analysis and plotting tools.  
+  - Forward Kinematics to obtain Pose from Joint Angles  
 
 ```
 
@@ -85,23 +123,5 @@ The project investigates the use of **BLDC motors** in a 6-DOF Stewart platform,
 - Evaluation of workspace, precision, and responsiveness.  
 - Comparison of sequential vs coordinated motor operation.  
 - Pose-level error analysis (translation & orientation).  
-
-```
-
-## 📑 Thesis Reference
-
-This repository supports the Master's thesis:  
-**[Title of Thesis]**  
-Author: *Ibrahim [Your Surname]*  
-Institution: *University College London (UCL)*  
-Year: *2025*
-
-```
-
-## 🔗 How to Cite
-
-If you use this work, please cite:
-
-I. [Your Surname], "Feasibility Study of a Brushless DC Actuated Stewart Platform for Aerial Additive Manufacturing," Master's Thesis, University College London, 2025.
 
 ```
