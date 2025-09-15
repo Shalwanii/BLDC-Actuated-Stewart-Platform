@@ -6,71 +6,69 @@ This repository contains all **CAD models**, **control code**, and **analysis sc
 The project investigates the use of **BLDC motors** in a 6-DOF Stewart platform, aiming to achieve **high responsiveness, precision, and lightweight design** suitable for UAV integration.
 
 
-## 📂 Repository Structure
-
 /CAD  
-   /Ball Joint
-      Ball Joint's Baseless Ball.f3d
-      Ball Joint's Baseless Ball.step
-      Ball Joint's Baseless Ball.stl
-    
-    /Lever Arm
-      Lever Arm.f3d
-      Lever Arm.step
-      Lever Arm.stl
+   /Ball_Joint  
+      Ball_Joint_Baseless.f3d  
+      Ball_Joint_Baseless.step  
+      Ball_Joint_Baseless.stl  
 
-    /Motor Facemount
-      Motor Facemount.f3d  
-      Motor Facemount.step 
-      Motor Facemount.stl
+   /Lever_Arm  
+      Lever_Arm.f3d  
+      Lever_Arm.step  
+      Lever_Arm.stl  
 
-   /Moving Base
-      Moving Base.f3d  
-      Moving Base.step  
-      Moving Base.stl  
+   /Motor_Facemount  
+      Motor_Facemount.f3d  
+      Motor_Facemount.step  
+      Motor_Facemount.stl  
 
-   /Potentiometer Coupler  
-      Potentiometer Coupler.f3d  
-      Potentiometer Coupler.step  
-      Potentiometer Coupler.stl  
+   /Moving_Base  
+      Moving_Base.f3d  
+      Moving_Base.step  
+      Moving_Base.stl  
 
-    /Potentiometer Mount
-      Potentiometer Case.f3d
-      Potentiometer Case.step
-      Potentiometer Case.stl
-      Potentiometer L-Bracket.f3d
-      Potentiometer L-Bracket.step
-      Potentiometer L-Bracket.stl
+   /Potentiometer_Coupler  
+      Potentiometer_Coupler.f3d  
+      Potentiometer_Coupler.step  
+      Potentiometer_Coupler.stl  
 
-    /Shaft
-      Shaft.f3d
-      Shaft.step
-      Shaft.stl
+   /Potentiometer_Mount  
+      Potentiometer_Case.f3d  
+      Potentiometer_Case.step  
+      Potentiometer_Case.stl  
+      Potentiometer_L_Bracket.f3d  
+      Potentiometer_L_Bracket.step  
+      Potentiometer_L_Bracket.stl  
 
-    /Stationary Base
-      Stationary Base.f3d
-      Stationary Base.step
-      Stationary Base.stl
+   /Shaft  
+      Shaft.f3d  
+      Shaft.step  
+      Shaft.stl  
 
-   Final Platform Assembly.step
-   Potentiometer.SLDPRT
-   Repeat_Compact.STEP
-  
+   /Stationary_Base  
+      Stationary_Base.f3d  
+      Stationary_Base.step  
+      Stationary_Base.stl  
+
+   Final_Platform_Assembly.step  
+   Potentiometer.SLDPRT  
+   Repeat_Compact.STEP  
+
 /Arduino  
-      Single_Motor_Test.ino
-      Sequential_Motor_Test.ino
-      Coordinated_Multi_Motor_Test.ino 
+   Single_Motor_Test.ino  
+   Sequential_Motor_Test.ino  
+   Coordinated_Multi_Motor_Test.ino  
 
 /Matlab  
-    stewartIK.m
-    workspace.m  
+   stewartIK.m  
+   workspace.m  
 
 /Python  
-    stewartFK.py  
+   stewartFK.py  
 
 /Docs  
-   README.md   
-
+   README.md
+ 
 ```
 ```
 ## 🛠️ CAD Models
